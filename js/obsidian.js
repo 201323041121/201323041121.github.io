@@ -13,6 +13,9 @@
  * @param {} menuSelector
  * @param {*} options
  */
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
 function scrollSpy(menuSelector, options) {
   var menu = $(menuSelector);
   if (!menu)
