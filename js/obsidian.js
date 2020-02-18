@@ -13,9 +13,6 @@
  * @param {} menuSelector
  * @param {*} options
  */
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-
 function scrollSpy(menuSelector, options) {
   var menu = $(menuSelector);
   if (!menu)
@@ -1172,7 +1169,22 @@ $(function () {
       case -1 != tag.indexOf("comment"):
         Obsidian.loading(),
           comment = $('#gitalk-container');
-        var gitalk = new Gitalk({
+ /*
+       var gitalk = new Gitalk({
+          clientID: 'cdfa7cefa4a3f13082ad',
+          clientSecret: '3581b27d0ff2bd0c5878f32296044837a45b41ce',
+          repo: bolg-comments,
+          owner: '201323041121',
+          admin: ['201323041121'],
+          id: location.pathname,
+          distractionFreeMode: false,
+          labels: ['Gitalk']
+        });
+        $(".comment").removeClass("link");
+        gitalk.render('gitalk-container');
+ */
+
+       var gitalk = new Gitalk({
           clientID: comment.data('ci'),
           clientSecret: comment.data('cs'),
           repo: comment.data('r'),
